@@ -11,7 +11,7 @@ import (
 func main() {
 
 	firmataAdapter := firmata.NewAdaptor("COM3")
-	led := gpio.NewLedDriver(firmataAdapter, "13")
+	led := gpio.NewLedDriver(firmataAdapter, "8")
 	work := func() {
 		gobot.Every(1*time.Second, func() {
 			led.Toggle()
